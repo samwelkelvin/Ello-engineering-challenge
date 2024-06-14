@@ -29,7 +29,7 @@ export default function SearchBookByTitle() {
   //graphql query
   const { error, loading, data } = useQuery(LOAD_BOOKS);
 
-  //state
+  //react hook
   const [books, setBooks] = useState([]);
   const [title, setTitle] = useState("");
 
@@ -37,7 +37,7 @@ export default function SearchBookByTitle() {
     setTitle(newTitle);
   };
 
-  //react hook
+ 
   useEffect(() => {
     if (data) {
       setBooks(data.books);
